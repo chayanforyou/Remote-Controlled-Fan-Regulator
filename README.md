@@ -1,4 +1,4 @@
-# Remote Control Switch
+# Remote Controlled Fan Regulator
 
 The circuit is an electronic switch. You can control the whole functionality, change fan speed, turn on or off the lights etc. from your couch or bed using IR remote, Here, I programmed it for 3 types of remote -> 1. Sony TV remote | 2. China TV remote | 3. Small MP3 players remote. VS1838 universal IR receiver is used to receive the infrared signal transmitted by remote control.
 
@@ -21,7 +21,7 @@ PIC12F675 is a fully functional 8 bit micro controller in eight pin package. The
 PIC12F675 and few more components are used to make this project. BT136 is logic level triac from NXP semiconductors® are intended for general purpose bidirectional switching and phase control applications. These devices are designed to directly interfaced with microcontroller or low power gate trigger circuits. The device can be trigger in all four quadrants but it is better to avoid the fourth quadrant which has higher gate trigger and latch currents. This circuit used quadrant two and three to trigger the triac which can handle a load current up to a maximum of 4A.
 
 <p align="center">
-  <img src="https://github.com/chayanforyou/Remote-Controlled-Regulator/blob/master/image/triac_quads.gif?raw=true"/>
+  <img src="image/triac_quads.gif?raw=true"/>
 </p>
 <p align="center" >
   <b>
@@ -33,7 +33,7 @@ The power supply for the circuit is derived from the a 220V, 50Hz ac line using 
 
 
 <p align="center">
-  <img src="https://github.com/chayanforyou/Remote-Controlled-Regulator/blob/master/image/zero_cross.gif?raw=true"/>
+  <img src="image/zero_cross.gif?raw=true"/>
 </p>
 <p align="center" >
   <b>
@@ -51,7 +51,7 @@ The microcontroller has eeprom which is used save the changed value after every 
 The zero-crossing detection circuit provides a pulse every time the AC signal crosses zero volts. We detect this with the microcontroller and leverage interrupts to time the trigger circuit precisely in synchronization with these zero-crossing events. The method for power control is shown in the diagram below.
 
 <p align="center">
-  <img src="https://github.com/chayanforyou/Remote-Controlled-Regulator/blob/master/image/Regulated_rectifier.gif?raw=true"/>
+  <img src="image/Regulated_rectifier.gif?raw=true"/>
 </p>
 <p align="center" >
   <b>Figure 3. Principle of Phase Angle Control</b>
@@ -67,7 +67,7 @@ The photo above clearly illustrates phase angle control: output voltage controll
 Here, the gate is driven 5ms after the zero-crossing:
 
 <p align="center">
-  <img src="https://github.com/chayanforyou/Remote-Controlled-Regulator/blob/master/image/5ms.png?raw=true"/>
+  <img src="image/5ms.png?raw=true"/>
 </p>
 <p align="center" >
   <b>Figure 4. Triac firing with 5 ms delay</b>
@@ -75,13 +75,13 @@ Here, the gate is driven 5ms after the zero-crossing:
   Green - Input AC<br>
   Yellow - AC Output after phase angle control<br>
   Pink - Gate Drive signal<br>
-  Image source: Tahmid's blog
+  Image source: Tahmid's blog (https://tahmidmc.blogspot.com)
 </p>
 
 ## Operational Use
 
 <p align="center">
-  <img width="600px" height="324px" src="https://github.com/chayanforyou/Remote-Controlled-Regulator/blob/master/image/remote_multi.jpg?raw=true"/>
+  <img width="600px" height="324px" src="image/remote_multi.jpg?raw=true"/>
 </p>
 <p align="center" >
   <b>
@@ -126,7 +126,7 @@ The LED is lit while it accepts the commands from the remote control. And it rem
 ## Schematic
 
 <p align="center">
-  <img width="627px" height="450px" src="https://github.com/chayanforyou/Remote-Controlled-Regulator/blob/master/image/schematic.png?raw=true"/>
+  <img width="627px" height="450px" src="image/schematic.png?raw=true"/>
 </p>
 <p align="center" >
   <b>
@@ -139,7 +139,7 @@ The LED is lit while it accepts the commands from the remote control. And it rem
 ## PCB Layout
 
 <p align="center">
-  <img width="601px" height="200px" src="https://github.com/chayanforyou/Remote-Controlled-Regulator/blob/master/image/pcb_layout.png?raw=true"/>
+  <img width="601px" height="200px" src="image/pcb_layout.png?raw=true"/>
 </p>
 <p align="center" >
   <b>
@@ -150,7 +150,7 @@ The LED is lit while it accepts the commands from the remote control. And it rem
 ## Final Result
 
 <p align="center">
-  <img width="605px" height="200px" src="https://github.com/chayanforyou/Remote-Controlled-Regulator/blob/master/image/final_output.jpg?raw=true"/>
+  <img width="605px" height="200px" src="image/final_output.jpg?raw=true"/>
 </p>
 <p align="center" >
   <b>
@@ -167,13 +167,12 @@ to factory settings, or if you are using IC-Prog, it will ask you before erasing
 
 **Note:** The circuit is tested on 220v 50Hz AC line and works perfectly.
 
-## YouTube Demo
+## Video Demo
 
-<!-- Video Link: https://www.youtube.com/watch?v=d68Gi21D5kw -->
-Video Link: https://www.youtube.com/@chayanmistry
+https://github.com/user-attachments/assets/f1392a13-6315-45cd-8300-aeb3287f4c77
 
 ## About the Source code
-I didn't included the source code, but only the pre-compiled HEXs for a simple reason: many of project based on PIC® microcontrollers I released for free in the past became commercial products without my authotization, without asking, without asking me if I wanted to partecipate, without giving me a candy and this is very sad to me since I spend lot of time and money. If you want to use it commercially contact:- <chayanforyou@yahoo.com>
+I didn't included the source code, but only the pre-compiled HEXs for a simple reason: many of project based on PIC® microcontrollers I released for free in the past became commercial products without my authotization, without asking, without asking me if I wanted to partecipate, without giving me a candy and this is very sad to me since I spend lot of time and money. If you want to use it commercially contact:- <chayanmistrry@gmail.com>
 
 ## Troubleshooting
 
@@ -191,7 +190,7 @@ Note that all pull request should go to `dev` branch.
 
 ## Developed By
 
-* Chayan Mistry - <chayanforyou@yahoo.com>
+* Chayan Mistry - <chayanmistrry@gmail.com>
 
 ### Thanks to
 
@@ -203,7 +202,7 @@ Note that all pull request should go to `dev` branch.
 
 > Anyone can use and share the code completly free, but keeping the original content unchanged and with enough credit. Commercial use is totally prohibited.
 
-[![](https://github.com/chayanforyou/Remote-Controlled-Regulator/blob/master/image/license.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![](image/license.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
